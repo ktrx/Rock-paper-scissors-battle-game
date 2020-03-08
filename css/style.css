@@ -1,0 +1,148 @@
+header{
+    height:65px;
+    width:100%;
+    background-color: #fafafa;
+    opacity:0.7;
+    position:fixed;
+    z-index:1;
+
+}
+.title{
+    font-size: 40px;
+    text-align:center;
+    margin-top:10px;
+}
+
+.field{
+    position: fixed;
+    z-index:0;
+    width:100%;
+}
+
+/* 名前 */
+.text{
+    position: relative;
+    display:flex;
+    flex-wrap: wrap;
+    width:100%;
+    z-index: 100;
+    margin:0 auto;
+}
+
+/* 点滅 */
+.blinking{
+	-webkit-animation:blink 1.5s ease-in-out infinite alternate;
+    -moz-animation:blink 1.5s ease-in-out infinite alternate;
+    animation:blink 1.0s ease-in-out infinite alternate;
+}
+@-webkit-keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@-moz-keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+
+/* ライフポイントはじめ */
+
+
+.life-wrapper{
+    position: relative;
+    display:flex;
+    flex-wrap: wrap;
+    width:100%;
+    z-index: 100;
+    margin:0 auto;
+    padding-top:10%;
+}
+.player-life,.enemy-life{
+    width:150px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.player-life{
+    padding-right:680px;
+    padding-left:35%;
+}
+
+.plife-point1,.plife-point2,.plife-point3,.elife-point1,.elife-point2,.elife-point3{
+    width:30px;
+    height:auto;
+}
+
+
+/* ライフポイントおわり */
+
+/* バトルはじめ */
+.battle{
+    position: relative;
+    display:flex;
+    flex-wrap: wrap;
+    width:100%;
+    z-index: 100;
+    justify-content: space-evenly;
+    padding-top:2%;
+}
+.monster{
+    width:20%;
+    height:auto;
+}
+.player{
+    width:20%;
+    height:auto;
+}
+
+.monster:hover,.player:hover{
+    opacity:0.7;
+    animation: hurueru .1s  infinite;
+}
+
+@keyframes hurueru {
+    0% {transform: translate(0px, 0px) rotateZ(0deg)}
+    25% {transform: translate(2px, 2px) rotateZ(1deg)}
+    50% {transform: translate(0px, 2px) rotateZ(0deg)}
+    75% {transform: translate(2px, 0px) rotateZ(-1deg)}
+    100% {transform: translate(0px, 0px) rotateZ(0deg)}
+}
+
+
+
+/* バトルおわり */
+
+.attack-wrapper{
+    position: relative;
+    display:flex;
+    flex-wrap: wrap;
+    width:500px;
+    z-index: 30;
+    justify-content: space-evenly;
+    padding-top:5%;
+    padding-left:25%;
+    margin: 0 0 0 auto;
+
+}
+
+.attack1,.attack2,.attack3{
+    width:70px;
+    height:auto;
+    padding-right:50px;
+}
+.attack1:hover,.attack2:hover,.attack3:hover{
+    opacity:0.7;
+}
+
+.count-wrapper{
+    position: relative;
+}
+
+#inline{
+    display:inline-block;
+}
+
